@@ -109,11 +109,22 @@ Slice, Splice
 // console.log(arr);
 // console.log(brr);
 
-let brr = arr.splice(2, 3, [40, 50, 60]);
 
-console.log(arr)
-console.log(brr);
+// let arr = [22, 33, 44, 55, 66, 77, 88, 99]
+// let brr = arr.splice(2, 3, [40, 50, 60]);
+// console.log(arr)
+// console.log(brr);
 
+// arr = [22, 33, 44, 55, 66, 77, 88, 99]
+// brr = arr.splice(2, 3, [40, 50, 60], [40, 50, 60], [40, 50, 60]);
+// console.log(arr);
+// console.log(brr);
+
+
+// arr = [22, 33, 44, 55, 66, 77, 88, 99]
+// brr = arr.splice(2, 3, [40, 50, 60], [40, 50, 60], [40, 50, 60], [40, 50, 60]);
+// console.log(arr);
+// console.log(brr);
 
 /*
 
