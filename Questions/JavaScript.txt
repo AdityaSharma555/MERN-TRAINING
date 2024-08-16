@@ -1,0 +1,6 @@
+Q1. What is javascript?
+-> js is a single threaded, dynamically typed, synchronous and scripted language.
+
+
+Q2. Difference between var and let.
+-> Variable defined with var can be redeclared or can be re assigned.

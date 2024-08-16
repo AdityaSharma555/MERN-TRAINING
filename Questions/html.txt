@@ -1,0 +1,36 @@
+Q1. Difference between href and src
+-> src used with images, connecting js with script tag.
+-> src will take the resource from source to our website.
+
+-> href used with anchor tag and linking css.
+-> href will take us to the linked resource in anchor tag.
+
+Q2. Difference between html element and html tag?
+-> html element consist of html tag (opening and closing) + html content/body + subelements.
+
+Q3. How to redirect in new tab in anchor tag?
+-> Using target attribute.
+-> target="_blank"
+
+Q4. What are void elements in HTML?
+-> Self closing tags are void elements.
+
+Q5. What is the difference between <input type="button" > and <button>
+-> Only button tag can be used to submit forms. input type= button cannot be used.
+________________________________________________________
+
+Honorable mentions-
+
+- required in html forms
+- disabled in html forms
+- submit vs button in html button tag.
+
+
+________________________________________________________
+
+Notable -
+
+- When disabled used in input tag, the data will not be seen in path params.
+
+- emmet for creating multipl div
+    - .container>.box#box-${box-$}*8

@@ -1,0 +1,109 @@
+Q1. Which css selector has more priority?
+-> id > class > element
+
+Q2. Priority order in (inline, external and style in head) ?
+-> Inline has highest priority. 
+-> external and style will overlap each other. The one which is defined later is displayed.
+
+Q3. What is Alternate box model?
+-> Using css property box-sizing: box-mode;
+
+Q4. Css units?
+-> vh, vw
+-> % : Takes % of parent size.
+-> em: Relative to the font-size of the element (2em means 2 times the size of the current font)
+-> rem: Relative to font-size of the root element
+
+
+Q4. If some div comes after span, will it come in same line or new line?
+-> new line.
+
+Q5. display - inline-block, block, inline?
+-> above problem can be solved using inline-block and inline.
+-> inline block will allow to come in same line, but next element cannot be in same line.
+-> width and height does not work in inline and it works in inline-block.
+
+Q6. Difference betweeen visibility : hidden and display : none?
+-> visibility : hidden will only hide the content but still occupy space in the webpage.
+-> display : none will hide as well as won't occupy any space.
+
+Q7. Explain position property.
+-> There are five different position values:
+    static
+    relative
+    fixed
+    absolute
+    sticky
+
+-> Static: HTML elements are positioned static by default.
+Static positioned elements are not affected by the top, bottom, left, and right properties.
+
+-> Relative: An element with position: relative; is positioned relative to its normal position.
+
+-> Fixed: An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
+
+-> Absolute: An element with position: absolute; is positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
+
+___________________________________________________________________________________________________________________________
+
+
+Q8. Flex Box-
+-> x axis = row axis = main axis (by default)
+-> y axis = column axis = cross axis (by default)
+
+-> For parent element:
+    -> display: flex     - child will be displayed flex.
+    -> flex-direction : column     - change flex direction.
+    -> flex-wrap : wrap     - when we will reduce the width of parent, the child will shift to next row. They will retain    their own width.
+    When disabled/not used, the child will shrink with the parent.
+    -> gap : 10px     - It will create gap in between child element of specified units. But no gap between child and parent.
+    -> (on child) margin : 10px     - It create margin on child. Gap will be everywhere, betweeen child-child and child-parent.
+    -> flex-flow: row wrap     - combination of flex direction and flex wrap.
+    -> justify-content:     - works across main axis.
+    -> align-items:     - works across cross axis.
+    -> align-content:     - It will define the position/distance between rows when children shifts to next rows.
+
+-> For Child element:
+    -> flex-basis : 25%     - % of parent that child will have (keept no height and width for child).
+    -> flex : shorthand for flex-grow, flex-shrink, flex-basis
+
+___________________________________________________________________________________________________________________________
+
+
+Q9. CSS Grid
+
+-> For Parent element:
+    -> display: grid;
+    -> grid-template-column: px or fr (fraction)
+    -> grid-template-row: px or fr (fraction)
+        -> 1fr 1fr 1fr
+        -> repeat(3, 1fr)
+        _> repeat(auto-fill, 200px)
+    -> gap
+    -> justify-content:
+
+-> For child element:
+    -> gird-clumn-start:
+    -> grid-column-end:
+    -> grid-row-start:
+    -> grid-row-end:
+
+    shorthand:
+    -> grid-column: start / end     |   ex- 1/ 3
+    -> grid-column: start / span 2    |   ex- 1/ span 2
+
+    ----------
+
+-> Using parent and child:
+    Parent:
+    -> grid-template-areas: "hdr hdr hdr hdr"
+                                 "sbr1 main main main"
+                                 "sbr2 main main main"
+                                 "ftr ftr ftr ftr";
+
+    Child:
+    -> grid-area: sbr1/hdr/ftr/etc
+
+___________________________________________________________________________________________________________________________
+
+

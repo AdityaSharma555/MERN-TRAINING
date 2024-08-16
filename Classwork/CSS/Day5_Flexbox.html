@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-5 | CSS | Flex, grid, pseudo classes, pseudo elements, overflow</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around; 
+            /* align-items: center; */
+            border: 2px solid red;
+            /* height: 100px; */
+            flex-wrap: wrap;
+            /* align-items: start; */
+            height: 400px;
+            /* gap: 10px; */
+            /* align-content: baseline; */
+
+        }
+
+        .box {
+            border: 2px solid blue;
+            /* height: 100px; */
+            width: 100px;
+            /* margin: 10px; */
+            /* flex-grow: 1; */
+            flex-basis: 25%;
+
+        }
+
+        #box1 {
+            order: 1;
+            /* flex-grow: 2; */
+            /* flex-shrink: 2; */
+        }
+
+        #box8 {
+            order: -1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="topics">
+        <h4>Flex, grid, pseudo classes, pseudo elements, overflow</h4>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="box" id="box1">box-1</div>
+        <div class="box" id="box2">box-2</div>
+        <div class="box" id="box3">box-3</div>
+        <div class="box" id="box4">box-4</div>
+        <div class="box" id="box5">box-5</div>
+        <div class="box" id="box6">box-6</div>
+        <div class="box" id="box7">box-7</div>
+        <div class="box" id="box8">box-8</div>
+    </div>
+
+    
+</body>
+</html>

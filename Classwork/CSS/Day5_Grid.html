@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            height: 100vh;
+            display: grid;
+            /* grid-template-columns: 100px 100px 100px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-columns: repeat(3, 1fr); */
+            gap: 20px;
+            /* justify-content: center; */
+            /* align-items: flex-start; */
+            /* grid-template-rows: 1fr 1fr 1fr; */
+
+            grid-template-areas: "hdr hdr hdr hdr"
+                                 "sbr1 main main main"
+                                 "sbr2 main main main"
+                                 "ftr ftr ftr ftr";
+        }
+
+        .box {
+            background-color: cornflowerblue;
+            border: 1px solid black;
+        }
+
+        #box1 {
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+
+            grid-area: hdr;
+        }
+
+        #box2 {
+            /* grid-column-start: 3;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+
+            grid-area: sbr1;
+        } 
+
+        #box3 {
+            grid-area: main;
+        }
+
+        #box4 {
+            grid-area: sbr2;
+        }
+
+        #box5 {
+            grid-area: ftr;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div class="box" id="box1">box-1</div>
+        <div class="box" id="box2">box-2</div>
+        <div class="box" id="box3">box-3</div>
+        <div class="box" id="box4">box-4</div>
+        <div class="box" id="box5">box-5</div>
+        <!-- <div class="box" id="box6">box-6</div>
+        <div class="box" id="box7">box-7</div>
+        <div class="box" id="box8">box-8</div>
+        <div class="box" id="box9">box-9</div> -->
+    </div>
+</body>
+</html>
