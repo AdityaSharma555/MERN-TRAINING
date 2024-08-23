@@ -1,0 +1,27 @@
+
+
+
+
+Spread Operator (...)
+The spread operator is used to "spread" the elements of an iterable (like an array, object, or string) into individual elements.
+
+
+Rest Operator (...)
+The rest operator is used to collect multiple elements into a single entity, usually an array.
+
+
+Note : You can give default values when destructuring 
+
+// For Arrays :
+
+- Indexing is important
+- variables are taken in order of the index
+
+// For objects :
+
+- Indexing not present 
+- destructuring is done using keys
+- name of the keys should be same
+- keys can be renamed using ':' while destructuring.
+
+
