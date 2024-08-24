@@ -5,6 +5,7 @@
     font-family: sans-serif;
 }
 
+
 /* HEADER */
 
 header {
@@ -177,8 +178,22 @@ header > .icons {
     display: flex;
     gap: 20px;
     min-height: 163.33px;
-
     padding: 20px 0 20px 30px;
+}
+
+@keyframes icon {
+    0%{
+        /* display: none; */
+        opacity: 0%;
+        top: 300px;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100%{
+        top: 0px;
+        opacity: 100%;
+    }
 }
 
 .section-2 .icon {
@@ -191,6 +206,10 @@ header > .icons {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    animation: icon 1s ease-in-out;
+    animation-timing-function: 4s;
 }
 
 .section-2 .desc {
@@ -200,6 +219,19 @@ header > .icons {
 .section-2 .title {
     font-size: 1.25rem;
     line-height: 1.2;
+    position: relative;
+    animation: title 1.5s ;
+    animation-timing-function: 4s;
+}
+
+@keyframes title {
+    0%{
+        top: -100px;
+
+    }
+    100%{
+        top: 0px;
+    }
 }
 
 .section-2 .text {
@@ -471,4 +503,5 @@ header > .icons {
 .section-7 .content p {
     font-size: 0.875rem;
 }
+
 

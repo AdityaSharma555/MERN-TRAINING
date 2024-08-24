@@ -290,6 +290,85 @@
         </div>
 
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add the correct animation class based on the element's existing class
+                        if (entry.target.classList.contains('title')) {
+                            entry.target.classList.add('animate-title');
+                        } else if (entry.target.classList.contains('icon')) {
+                            entry.target.classList.add('animate-icon');
+                        }
+                    } else {
+                        // Optionally remove the animation class to reset the animation
+                        if (entry.target.classList.contains('title')) {
+                            entry.target.classList.remove('animate-title');
+                        } else if (entry.target.classList.contains('icon')) {
+                            entry.target.classList.remove('animate-icon');
+                        }
+                    }
+                });
+            });
+        
+            // Select and observe all elements with the .title or .icon class
+            const elementsToAnimate = document.querySelectorAll('.title, .icon');
+            elementsToAnimate.forEach(element => observer.observe(element));
+        });
+
+    </script>
     
+    
+
+
+
+<!-- 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add the animation when the element is in view
+                        entry.target.style.animation = 'title 1s ease-in-out forwards';
+                    } else {
+                        // Remove the animation if it should reset when out of view
+                        entry.target.style.animation = 'none';
+                    }
+                });
+            });
+        
+            // Select and observe all elements with the .title class
+            const titleElements = document.querySelectorAll('.section-2 .title');
+            titleElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Add the animation when the element is in view
+                        entry.target.style.animation = 'title 1s ease-in-out forwards';
+                    } else {
+                        // Remove the animation if it should reset when out of view
+                        entry.target.style.animation = 'none';
+                    }
+                });
+            });
+        
+            // Select and observe all elements with the .title class
+            const titleElements = document.querySelectorAll('.section-2 .icon');
+            titleElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+        </script> -->
+        
+        
 </body>
 </html>
