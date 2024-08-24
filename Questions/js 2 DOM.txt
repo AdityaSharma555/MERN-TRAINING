@@ -1,0 +1,3 @@
+
+- myDiv.style.attribute will only affect that attribute and all other things remain same.
+- myDiv.getAttribute will remove all previous styles
