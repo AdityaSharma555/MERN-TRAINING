@@ -15,3 +15,8 @@ Q. Does var support hoisting and const, let does not support hoisting?
     - let, const are put in Temporal Dead Zone which is inside Variable Environment.
 - Var will let you access the Variable before initialization.
     - It will give undefined value.
+
+
+
+
+Q What are constructors in js?

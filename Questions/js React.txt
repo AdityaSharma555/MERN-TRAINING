@@ -1,0 +1,16 @@
+
+Q. Naming Convention :
+
+- camel case : variables
+- pascal case : component
+- snake case : security
+
+Q. Framework vs Library.
+- React is a library.
+- Frameworks contain all the functionality in itself to create a complete application.
+- React does not have routing
+
+Q Difference between create-react-app and vite
+- vite provides faster boot
+- It is mandatory to use .jsx in vite
+- In cra, .jsx and .js both works
