@@ -1,7 +1,9 @@
 const { log } = require("console");
-const fs = require("fs");
-const os = require("os");
-const path = require("path");
+// const { EventEmitter } = require("stream");
+// const fs = require("fs");
+// const os = require("os");
+// const path = require("path");
+// const http = require("http");
 
 // console.log(process);
 
@@ -97,12 +99,106 @@ const path = require("path");
 
 // Path module
 
-console.log(path.dirname("C:/Users/Aditya/Desktop/Workspace/Full Stack Training/Classwork/JavaScript/Day13_DOM.js"));
-console.log(path.extname("C:/Users/Aditya/Desktop/Workspace/Full Stack Training/Classwork/JavaScript/Day13_DOM.js"));
-console.log(path.basename("C:/Users/Aditya/Desktop/Workspace/Full Stack Training/Classwork/JavaScript/Day13_DOM.js"));
+// console.log(path.dirname("C:/Users/Aditya/Desktop/Workspace/Full Stack Training/Classwork/JavaScript/Day13_DOM.js"));
+// console.log(path.extname("C:/Users/Aditya/Desktop/Workspace/Full Stack Training/Classwork/JavaScript/Day13_DOM.js"));
+// console.log(path.basename("C:/Users/Aditya/Desktop/Workspace/Full Stack Training/Classwork/JavaScript/Day13_DOM.js"));
 
-const fullPath = path.join("user", "local", "bin", "script")
-console.log((fullPath));
+// const fullPath = path.join("user", "local", "bin", "script")
+// console.log((fullPath));
 
-const absPath = path.resolve("user", "local", "bin", "script");
-console.log(absPath);
+// const absPath = path.resolve("user", "local", "bin", "script");
+// console.log(absPath);
+
+// ____________________________________
+
+
+// http module
+
+// const server = http.createServer((req, res)=>{
+//   console.log(req.url);
+
+//   if(req.url == "/") {
+//     res.end("Welcome to Home route");
+//   } else if (req.url == "/contact") {
+//     res.end("Welcome to contact route");
+//   }
+// })
+
+// // ip of our localhost is 127.0.0.1
+
+// server.listen(3000, "127.0.0.1", ()=>{
+//     console.log("Server is running on port 3000");
+// })
+
+
+// ______________________________
+
+// const EventEmitter = require("events")
+
+// const event = new EventEmitter();
+
+// event.on("myName", (name, age)=>{
+//   console.log(`First Event : Hello my name is ${name} and age is ${age}`);
+// });
+
+// event.on("myName", (name, age)=>{
+//   console.log(`Second Event : Hello my name is ${name} and age is ${age}`);
+// });
+
+// event.emit("myName", "shubham", 23);
+
+// ____________________________
+
+// const http = require("http");
+// const EventEmitter = require("events")
+
+// const event = new EventEmitter();
+
+// const server = http.createServer((req, res)=>{
+//   if(req.url === "/") {
+//     res.end("Home Page");
+//     event.on("homePageAccessed", ()=>{
+//       console.log("Home api called");
+//     });
+//   }
+//   else if (req.url == "/about"){
+//     res.end("About Page");
+//     event.on("AboutPageAccessed", ()=>{
+//       console.log("about api called");
+//     })
+//   }
+// })
+
+
+// server.on("request", (req, res)=>{
+//   console.log("Request called. URL : " + );
+// })
+
+// server.listen(3000, "127.0.0.1", ()=>{
+//     console.log("Server is running on port 3000");
+// })
+
+// ___________________________________
+
+const http = require("http");
+const EventEmitter = require("events");
+
+const  event = new EventEmitter();
+
+const server = http.createServer((req, res) => {
+  if(req.method === "POST") {
+    let body = "";
+    req.on("data",  (chunk)=>{
+      body += chunk.toString();
+    });
+
+    req.on("end", ()=>{
+      storedData = JSON.parse(body);
+      res.end("Post req clicked");
+    })
+  }
+})
+
+server.listen(3000, "127.0.0.1", ()=>{
+    console.log("Server is running on port 3000");
+})
